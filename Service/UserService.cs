@@ -17,12 +17,16 @@ namespace Service
 
         public async Task<bool> CheckMobileNoIsExist(string mobileno)
         {
+            mobileno = Encoding.UTF8.GetString(Convert.FromBase64String(mobileno));
+
             var UserprofileData = await new GenericRepository<DataAccess.Models.Profile>().FindOne(u => u.MobileNo == mobileno);
             if (UserprofileData != null) return true;
             else return false;
         }
         public async Task<bool> CheckEmailAddressIsExist(string email)
         {
+            email = Encoding.UTF8.GetString(Convert.FromBase64String(email));
+
             var UserprofileData = await new GenericRepository<DataAccess.Models.Profile>().FindOne(u => u.EmailAddress == email);
             if (UserprofileData != null) return true;
             else return false;
@@ -50,7 +54,7 @@ namespace Service
 
         public async Task<List<Role>> GetUserRoleList()
         {
-            return await new GenericRepository<Role>().Find(r=>r.RoleName != "Admin" && r.IsDeleted == false);
+            return await new GenericRepository<Role>().Find(r => r.RoleName != "Admin" && r.IsDeleted == false);
         }
 
         public async Task<JWTTokenDTO> UserLoginToken(UserLoginDTO userLoginData)
@@ -62,7 +66,7 @@ namespace Service
             if (UserValidationMessage != "OK") throw new Exception(UserValidationMessage);
             else // USER IS VALID, CPROVIDE TOKEN
             {
-                var profileData = await new GenericRepository<Profile>().FindOne(u => u.EmailAddress == userLoginData.RefString || u.MobileNo ==  userLoginData.RefString);
+                var profileData = await new GenericRepository<Profile>().FindOne(u => u.EmailAddress == userLoginData.RefString || u.MobileNo == userLoginData.RefString);
                 var userAccountData = await new GenericRepository<UserAccount>().FindOne(u => u.ProfileId == profileData.Id);
                 var userRole = await new GenericRepository<Role>().FindOne(u => u.Id == userAccountData.RoleId);
 
@@ -82,7 +86,7 @@ namespace Service
 
                 var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(JWTTokenConfigDTO.JwtKey));
                 var signIn = new SigningCredentials(key, SecurityAlgorithms.HmacSha256);
-                var token = new JwtSecurityToken(JWTTokenConfigDTO.JwtIssuer, JWTTokenConfigDTO.JwtAudience,claims,
+                var token = new JwtSecurityToken(JWTTokenConfigDTO.JwtIssuer, JWTTokenConfigDTO.JwtAudience, claims,
                     expires: DateTime.UtcNow.AddMinutes(60),
                     signingCredentials: signIn);
 
@@ -160,11 +164,11 @@ namespace Service
         {
             var profileData = await new GenericRepository<Profile>().FindOne(u => u.EmailAddress == user.RefString || u.MobileNo == user.RefString);
             if (profileData == null) throw new Exception("User Profile Not Found.");
-            
+
             var userData = await new GenericRepository<UserAccount>().FindOne(u => u.ProfileId == profileData.Id);
             if (userData == null) throw new AuthenticationException("User Not Found.");
-            
-            else if (!new Crypto().VerifyHashedPassword(userData.UserPassword,user.UserPassword)) throw new AuthenticationException("Incorrect Password.");
+
+            else if (!new Crypto().VerifyHashedPassword(userData.UserPassword, user.UserPassword)) throw new AuthenticationException("Incorrect Password.");
             else return "OK";
         }
 
@@ -176,11 +180,11 @@ namespace Service
 
             userData.UserPassword = new Crypto().HashPassword(user.UserPassword);
 
-           return await new GenericRepository<UserAccount>().Update(userData, u => u.ProfileId == userData.ProfileId);
-           
+            return await new GenericRepository<UserAccount>().Update(userData, u => u.ProfileId == userData.ProfileId);
+
         }
 
 
-        
+
     }
 }

@@ -41,7 +41,7 @@ namespace DataAccess.Contexts
             if (!optionsBuilder.IsConfigured)
             {
 #warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see http://go.microsoft.com/fwlink/?LinkId=723263.
-                optionsBuilder.UseSqlServer("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=F:\\Visual Studio 2008\\Frameworks\\BoilerPlateDotNet6\\DataAccess\\DBFiles\\DB_SYS.mdf;Integrated Security=True;Initial Catalog=DB_SYS;");
+                optionsBuilder.UseSqlServer("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=F:\\Visual Studio 2008\\Frameworks\\Net6APIUserManagement\\DataAccess\\DBFiles\\DB_SYS.mdf;Integrated Security=True;Initial Catalog=DB_SYS;");
             }
         }
 

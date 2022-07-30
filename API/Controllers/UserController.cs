@@ -16,7 +16,7 @@ namespace API.Controllers
         }
 
         [HttpGet]
-        [Route("user/email/is/exist")]
+        [Route("user/email/is/exist/{email}")]
         public async Task<IActionResult> CheckEmailAddressIsExist(string email)
         {
             try
@@ -27,7 +27,7 @@ namespace API.Controllers
         }
 
         [HttpGet]
-        [Route("user/mobile/is/exist")]
+        [Route("user/mobile/is/exist/{mobilno}")]
         public async Task<IActionResult> CheckMobileNoIsExist(string mobilno)
         {
             try
@@ -70,7 +70,7 @@ namespace API.Controllers
             }
             catch (Exception ex) { return getResponse(ex); }
         }
-        
+
         [HttpPost]
         [Route("user/login/token")]
         public async Task<IActionResult> UserLoginToken(UserLoginDTO user)
@@ -81,17 +81,6 @@ namespace API.Controllers
             }
             catch (Exception ex) { return getResponse(ex); }
         }
-
-        //[HttpPost]
-        //[Route("user/account/create")]
-        //public async Task<IActionResult> CreateUserAccount(UserAccountCreateDTO user)
-        //{
-        //    try
-        //    {
-        //        return getResponse(await service.CreateUserAccount(user));
-        //    }
-        //    catch (Exception ex) { return getResponse(ex); }
-        //}
 
         [HttpPost]
         [Route("user/password/reset")]
