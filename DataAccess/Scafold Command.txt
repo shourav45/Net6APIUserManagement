@@ -1,0 +1,2 @@
+﻿Scaffold-DbContext "Data Source=IT-PC3\SQLEXPRESS;Initial Catalog=DB_SYS;Integrated Security=True" Microsoft.EntityFrameworkCore.SqlServer -Context SysContext -ContextDir Contexts  -OutputDir Models -f
+Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=F:\\Visual Studio 2008\\Frameworks\\BoilerPlateDotNet6\\DataAccess\\DBFiles\\DB_SYS.mdf;Integrated Security=True;Initial Catalog=DB_SYS;

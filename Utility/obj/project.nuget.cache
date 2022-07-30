@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "IuQrsETKxIfCGhYVfrlzqqpJtfaB0GJZM6eMDONX1Bwk6W8Azp5F/c9RED4vh3wqEIDisWvrhJzovysoMdFlBQ==",
+  "success": true,
+  "projectFilePath": "F:\\Visual Studio 2008\\Frameworks\\Net6APIUserManagement\\Utility\\Utility.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\IT_PC3\\.nuget\\packages\\microsoft.aspnetcore.cryptography.internal\\6.0.7\\microsoft.aspnetcore.cryptography.internal.6.0.7.nupkg.sha512",
+    "C:\\Users\\IT_PC3\\.nuget\\packages\\microsoft.aspnetcore.cryptography.keyderivation\\6.0.7\\microsoft.aspnetcore.cryptography.keyderivation.6.0.7.nupkg.sha512",
+    "C:\\Users\\IT_PC3\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512"
+  ],
+  "logs": []
+}
