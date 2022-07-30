@@ -26,3 +26,17 @@ F:\Visual Studio 2008\Frameworks\BoilerPlateDotNet6\DataAccess\obj\Debug\net6.0\
 F:\Visual Studio 2008\Frameworks\BoilerPlateDotNet6\DataAccess\obj\Debug\net6.0\DataAccess.pdb
 F:\Visual Studio 2008\Frameworks\BoilerPlateDotNet6\DataAccess\obj\Debug\net6.0\DataAccess.genruntimeconfig.cache
 F:\Visual Studio 2008\Frameworks\BoilerPlateDotNet6\DataAccess\obj\Debug\net6.0\ref\DataAccess.dll
+F:\Visual Studio 2008\Frameworks\Net6APIUserManagement\DataAccess\bin\Debug\net6.0\DataAccess.deps.json
+F:\Visual Studio 2008\Frameworks\Net6APIUserManagement\DataAccess\bin\Debug\net6.0\DataAccess.runtimeconfig.json
+F:\Visual Studio 2008\Frameworks\Net6APIUserManagement\DataAccess\bin\Debug\net6.0\DataAccess.dll
+F:\Visual Studio 2008\Frameworks\Net6APIUserManagement\DataAccess\bin\Debug\net6.0\DataAccess.pdb
+F:\Visual Studio 2008\Frameworks\Net6APIUserManagement\DataAccess\obj\Debug\net6.0\DataAccess.csproj.AssemblyReference.cache
+F:\Visual Studio 2008\Frameworks\Net6APIUserManagement\DataAccess\obj\Debug\net6.0\DataAccess.GeneratedMSBuildEditorConfig.editorconfig
+F:\Visual Studio 2008\Frameworks\Net6APIUserManagement\DataAccess\obj\Debug\net6.0\DataAccess.AssemblyInfoInputs.cache
+F:\Visual Studio 2008\Frameworks\Net6APIUserManagement\DataAccess\obj\Debug\net6.0\DataAccess.AssemblyInfo.cs
+F:\Visual Studio 2008\Frameworks\Net6APIUserManagement\DataAccess\obj\Debug\net6.0\DataAccess.csproj.CoreCompileInputs.cache
+F:\Visual Studio 2008\Frameworks\Net6APIUserManagement\DataAccess\obj\Debug\net6.0\DataAccess.dll
+F:\Visual Studio 2008\Frameworks\Net6APIUserManagement\DataAccess\obj\Debug\net6.0\refint\DataAccess.dll
+F:\Visual Studio 2008\Frameworks\Net6APIUserManagement\DataAccess\obj\Debug\net6.0\DataAccess.pdb
+F:\Visual Studio 2008\Frameworks\Net6APIUserManagement\DataAccess\obj\Debug\net6.0\DataAccess.genruntimeconfig.cache
+F:\Visual Studio 2008\Frameworks\Net6APIUserManagement\DataAccess\obj\Debug\net6.0\ref\DataAccess.dll

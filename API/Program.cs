@@ -50,7 +50,7 @@ builder.Services.AddSwaggerGen(options =>
 builder.Services.AddScoped<UserService>();
 builder.Services.AddScoped<ProfileService>();
 builder.Services.AddScoped<RoleAndPermissionService>();
-
+builder.Services.AddScoped<MenuService>();
 //JWT TOKEN AUTHENTICATION
 builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
          .AddJwtBearer(options =>

@@ -15,6 +15,7 @@ namespace DataAccess.DTOs
         public string? Gender { get; set; }
         public DateTime? DateOfBirth { get; set; }
         public string Profession { get; set; } = null!;
+        public int? RoleID { get; set; }
         public string EmailAddress { get; set; } = null!;
         public string MobileNo { get; set; } = null!;
         public string UserPassword { get; set; } = null!;

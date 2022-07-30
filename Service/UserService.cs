@@ -38,6 +38,7 @@ namespace Service
                 Id = 0,
                 ProfileId = UserProfileData.Id,
                 IsDeleted = false,
+                RoleId = profiledata.RoleID,
                 UserPassword = new Crypto().HashPassword(profiledata.UserPassword),
                 UpdatedOn = DateTime.UtcNow,
             };
@@ -51,6 +52,7 @@ namespace Service
         {
             return await new GenericRepository<Role>().Find(r=>r.RoleName != "Admin" && r.IsDeleted == false);
         }
+
         public async Task<JWTTokenDTO> UserLoginToken(UserLoginDTO userLoginData)
         {
             JWTTokenDTO TokenObject = new JWTTokenDTO();
@@ -153,16 +155,6 @@ namespace Service
             return TokenObject;
         }
 
-        public async Task<UserAccount> GetUserAccount(string refstring)
-        {
-            var profileData = await new GenericRepository<Profile>().FindOne(u => u.EmailAddress == refstring || u.MobileNo == refstring);
-            if(profileData == null) throw new Exception("User Not Found.");
-            
-            var userData = await new GenericRepository<UserAccount>().FindOne(u => u.ProfileId == profileData.Id);
-        
-            if (userData == null) throw new Exception("User Account Not Found.");
-            else return userData;
-        }
 
         private async Task<string> UserLoginValidation(UserLoginDTO user)
         {
