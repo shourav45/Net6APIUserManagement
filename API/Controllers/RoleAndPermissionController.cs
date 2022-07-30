@@ -1,11 +1,13 @@
 ﻿using DataAccess.DTOs;
 using DataAccess.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Service;
 
 namespace API.Controllers
 {
+    [Authorize]
     [Route("api/")]
     [ApiController]
     public class RoleAndPermissionController : ControllerBase

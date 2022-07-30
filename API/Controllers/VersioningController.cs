@@ -22,7 +22,7 @@ namespace API.Controllers
         [MapToApiVersion("1.0")]
         [HttpGet]
         [Route("get/data")]
-        public async Task<IActionResult> GetDatav1(string refcode)
+        public async Task<IActionResult> GetDatav1()
         {
             try
             {
@@ -34,7 +34,7 @@ namespace API.Controllers
         [MapToApiVersion("2.0")]
         [HttpGet]
         [Route("get/data")]
-        public async Task<IActionResult> GetDatav2(string refcode)
+        public async Task<IActionResult> GetDatav2()
         {
             try
             {

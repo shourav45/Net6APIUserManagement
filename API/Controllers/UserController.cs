@@ -5,6 +5,7 @@ using Service;
 
 namespace API.Controllers
 {
+    [Authorize]
     [Route("api/")]
     [ApiController]
     public class UserController : ControllerBase
@@ -15,6 +16,7 @@ namespace API.Controllers
             service = new UserService();
         }
 
+        [AllowAnonymous]
         [HttpGet]
         [Route("user/email/is/exist/{email}")]
         public async Task<IActionResult> CheckEmailAddressIsExist(string email)
@@ -26,6 +28,7 @@ namespace API.Controllers
             catch (Exception ex) { return getResponse(ex); }
         }
 
+        [AllowAnonymous]
         [HttpGet]
         [Route("user/mobile/is/exist/{mobilno}")]
         public async Task<IActionResult> CheckMobileNoIsExist(string mobilno)
@@ -36,7 +39,7 @@ namespace API.Controllers
             }
             catch (Exception ex) { return getResponse(ex); }
         }
-
+        [AllowAnonymous]
         [HttpGet]
         [Route("get/user/role/list")]
         public async Task<IActionResult> GetUserRoleList()
@@ -47,7 +50,7 @@ namespace API.Controllers
             }
             catch (Exception ex) { return getResponse(ex); }
         }
-
+        [AllowAnonymous]
         [HttpPost]
         [Route("user/sign/up")]
         public async Task<IActionResult> UserSignUp(ProfileCreateDTO profiledata)
@@ -70,7 +73,7 @@ namespace API.Controllers
             }
             catch (Exception ex) { return getResponse(ex); }
         }
-
+        [AllowAnonymous]
         [HttpPost]
         [Route("user/login/token")]
         public async Task<IActionResult> UserLoginToken(UserLoginDTO user)

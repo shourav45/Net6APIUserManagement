@@ -1,9 +1,11 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Service;
 
 namespace API.Controllers
 {
+    [Authorize]
     [Route("api/")]
     [ApiController]
     public class MenuController : ControllerBase
